@@ -1,0 +1,15 @@
+.form-container{
+    text-align: center;    
+  }
+  .book-form{
+    display: inline-block;
+    margin: 20pt;
+    width: 100%;
+  }
+
+  .book-input{
+    width: 220px;  
+    margin: 5pt;
+    height: 50px;
+  }
+  
