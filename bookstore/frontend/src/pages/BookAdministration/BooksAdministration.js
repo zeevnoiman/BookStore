@@ -1,13 +1,12 @@
 import React, { Component } from "react";
-import Product from "./Product";
+import Product from "../../components/Product";
 import BookToAdministrate from "./BookToAdministrate";
-import Title from "./Title";
-import { storeProducts } from "../data";
+import Title from "../../components/Title";
 import styled from "styled-components";
-import { ProductConsumer, getProducts } from "../context";
+import { ProductConsumer, getProducts } from "../../context";
 import BookToAdd from "./BookToAdd";
 import AddModal from "./AddModal"
-import { ButtonContainer } from "./Button";
+import { ButtonContainer } from "../../components/Button";
 import "./BooksAdministration.css"
 export default class BooksAdministration extends Component {
     constructor(props) {

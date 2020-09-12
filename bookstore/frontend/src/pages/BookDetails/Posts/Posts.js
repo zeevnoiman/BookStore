@@ -4,7 +4,6 @@ import React from 'react';
 
 import CommentList from "./CommentList";
 import CommentForm from "./CommentForm";
-// import { detailProduct } from '../../data';
 // import { ProductConsumer } from '../../context';
 
 // const endpoint = 'http://localhost:8080/';

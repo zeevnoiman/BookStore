@@ -1,8 +1,8 @@
 import React from "react";
-import { ProductConsumer } from "../context";
-import { ButtonContainer } from "./Button";
+import { ProductConsumer } from "../../context";
+import { ButtonContainer } from "../../components/Button";
 import { Link } from "react-router-dom";
-import Posts from './Posts/Posts';
+import Posts from '../../components/Posts/Posts';
 // import './Details.css';
 
 export default function Details() {

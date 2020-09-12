@@ -1,12 +1,9 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { ProductConsumer } from "../context";
-import { ButtonContainer } from "./Button";
+import { ProductConsumer } from "../../context";
+import { ButtonContainer } from "../../components/Button";
 import { Link } from "react-router-dom";
-import BookToAdd from "./BookToAdd";
-
-export default class AddModal extends Component {
-
+export default class Modal extends Component {
     constructor(props) {
         super(props);
         this.state = {value: ''};
@@ -23,25 +20,16 @@ export default class AddModal extends Component {
         console.log('A name was submitted: ' + this.state.value);
         event.preventDefault();
       }
+    
     render() {
         return (
             <ProductConsumer>
                 {value => {
-                    const { addModalOpen, closeAddModal, addNewBook } = value;
-                    const {authors, title, publisher, description, pageCount, categories, thumbnail } = value.modalProduct;
-                    
-                    if (!addModalOpen) {
+                    const { updateModalOpen, closeUpdateModal, updateItem } = value;
+                    const { _id, image_url, title, price, author, publisher } = value.modalProduct;
+                    if (!updateModalOpen) {
                         return null;
                     } else {
-                        const newBook = {
-                            author : authors[0],
-                            title,
-                            publisher,
-                            description,
-                            pages : pageCount,
-                            genre : categories[0],
-                            image_url : thumbnail,
-                        };    
                         return (
                             <ModalContainer>
                                 <div className="container">
@@ -50,10 +38,10 @@ export default class AddModal extends Component {
                                             className="col-8 mx-auto col-md-6 col-lg-4 p-5 text-center text-capitalize"
                                             id="modal"
                                         >
-                                            <h5>Add this item?</h5>
-                                            <img src={thumbnail} className="img-fluid" alt="" />
+                                            <h5>Change items price:</h5>
+                                            <img src={image_url} className="img-fluid" alt="" />
                                             <h5>{title}</h5>
-                                            <h5 className="text-muted">author : {authors}</h5>
+                                            <h5 className="text-muted">author : {author}</h5>
                                             <h5 className="text-muted">publisher : {publisher}</h5>                                       
                                             <label>
                                                 <input type="text" placeholder="Define a Price" value={this.state.value} onChange={this.handleChange} />
@@ -61,21 +49,21 @@ export default class AddModal extends Component {
                                             <Link to="/booksAdministration">
                                                 <ButtonContainer
                                                     onClick={() => {
-                                                        newBook.price = Number(this.state.value);
-                                                        addNewBook(newBook);
-                                                        closeAddModal();
+                                                        const newPrice = Number(this.state.value);
+                                                        updateItem(_id, newPrice);
+                                                        closeUpdateModal();
                                                     }}
                                                 >
-                                                    YES
+                                                    Confirm
                                                 </ButtonContainer>
                                             </Link>
                                             <Link to="/booksAdministration">
                                                 <ButtonContainer
                                                     onClick={() => {
-                                                        closeAddModal();
+                                                        closeUpdateModal();
                                                     }}
                                                 >
-                                                    NO
+                                                    CANCEL
                                                  </ButtonContainer>
                                             </Link>
                                         </div>

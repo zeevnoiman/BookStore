@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components'
 import { css } from 'styled-components'
 
-import Title from "../Title";
+import Title from "../../components/Title";
 
 export default class contactUs extends Component {
   constructor(props) {
