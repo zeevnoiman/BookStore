@@ -3,7 +3,6 @@ import moment from 'moment';
 // moment is a library for parsing, validating, manipulating, and formatting dates
 
 import { Rating } from '@material-ui/lab';
-import { ProductConsumer } from '../../context';
 
 export default function Comment(props) {
 
