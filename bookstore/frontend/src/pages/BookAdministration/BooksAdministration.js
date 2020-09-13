@@ -28,13 +28,12 @@ export default class BooksAdministration extends Component {
       this.googleBooksApi();
     }
           
-    googleBooksApi =  async function (params) {
+    async googleBooksApi () {
       const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${this.state.value}&intitle=${this.state.value}&key=AIzaSyD2QWE7fuDymvvLUCFwOfN7CHZ2w8sEmDI`, {
           method: 'GET',
       });           
       const books = await response.json();
       console.log(books);
-      await console.log(books.items[4].volumeInfo.authors);
       
       let preGoogleBooks = [];
       books.items.forEach(item => {
