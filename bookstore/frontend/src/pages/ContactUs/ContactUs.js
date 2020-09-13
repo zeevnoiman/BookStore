@@ -92,14 +92,14 @@ const Container = styled.div`
     ${props => props.wrapper && css`
         box-shadow: 0 0 20px 0 rgba(184, 22, 31, 0.3);
         > * {
-            padding: 1em; 
+            padding: 1rem; 
         }
         
         @media (min-width: 700px) {
             display: grid; 
             grid-template-columns: 1fr 2fr; 
             > * {
-                padding: 2em; 
+                padding: 2rem; 
             }
         }
     `}

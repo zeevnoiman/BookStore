@@ -9,13 +9,12 @@
 }
 
 body {
-  font-family: "Oswald", sans-serif !important;
+  font-family: "Roboto", sans-serif !important;
   background: var(--mainWhite) !important;
   color: var(--mainDark) !important;
 }
 .text-title {
-  font-family: "Permanent Marker", cursive;
-  letter-spacing: 0.3rem;
+  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
 }
 .text-blue {

@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
 }
 body, html {
   background: #eee;
-  font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
   height: 100%;
