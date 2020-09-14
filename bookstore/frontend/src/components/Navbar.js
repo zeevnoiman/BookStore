@@ -119,7 +119,7 @@ const Nav = styled.nav`
         flex-direction: row;
     }
     .hamburgerButton {
-        display:none
+        display:none;
         cursor: pointer;
       }
       
@@ -134,7 +134,7 @@ const Nav = styled.nav`
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-item: center;
+        align-items: center;
         width: 90%;
     }
     .navbar-nav{
@@ -214,5 +214,4 @@ const Nav = styled.nav`
             padding-top: 10px;
             opacity: 50%;
            }
-        
 `;

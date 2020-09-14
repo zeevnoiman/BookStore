@@ -52,7 +52,7 @@ export default function Details() {
                             </div>
                             {/* product info */}
                             <div className="col-10 mx-auto col-md-10 my-3">
-                                <h1>title : {title}</h1>
+                                <h1>Title : {title}</h1>
                                 <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
                                     Author : <span className="text-uppercase">{author}</span>
                                 </h4>
