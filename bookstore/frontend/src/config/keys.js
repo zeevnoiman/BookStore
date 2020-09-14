@@ -1,0 +1,1 @@
+export const googleBooksKey = "AIzaSyD2QWE7fuDymvvLUCFwOfN7CHZ2w8sEmDI";

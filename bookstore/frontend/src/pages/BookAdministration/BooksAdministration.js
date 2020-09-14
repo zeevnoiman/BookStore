@@ -7,7 +7,8 @@ import { ProductConsumer, getProducts } from "../../context";
 import BookToAdd from "./BookToAdd";
 import AddModal from "./AddModal"
 import { ButtonContainer } from "../../components/Button";
-import "./BooksAdministration.css"
+import "./BooksAdministration.css";
+import {googleBooksKey} from '../../config/keys';
 export default class BooksAdministration extends Component {
     constructor(props) {
       super(props);
@@ -29,7 +30,7 @@ export default class BooksAdministration extends Component {
     }
           
     async googleBooksApi () {
-      const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${this.state.value}&intitle=${this.state.value}&key=AIzaSyD2QWE7fuDymvvLUCFwOfN7CHZ2w8sEmDI`, {
+      const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${this.state.value}&intitle=${this.state.value}&key=${googleBooksKey}`, {
           method: 'GET',
       });           
       const books = await response.json();
