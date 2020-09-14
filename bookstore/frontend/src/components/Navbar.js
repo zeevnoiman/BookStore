@@ -59,9 +59,9 @@ export default function Navbar() {
 
                                 {isAuthenticated &&
                                     <li className="nav-item welcome-username">
-                                        <h2 className="text-capitalize font-weight-bold text-white">
+                                        <h3 className="text-capitalize font-weight-bold text-white">
                                             Welcome <strong>{username}</strong>
-                                        </h2>
+                                        </h3>
                                     </li>
                                 }
 
