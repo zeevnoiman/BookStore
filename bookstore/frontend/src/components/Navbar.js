@@ -64,7 +64,6 @@ export default function Navbar() {
                                         </h3>
                                     </li>
                                 }
-
                             </ul>
                             {!isAuthenticated ? (
                                 <ul className="navbar-nav-actions">
