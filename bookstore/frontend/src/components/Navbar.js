@@ -113,6 +113,7 @@ export default function Navbar() {
 
 const Nav = styled.nav`
     background: var(--mainBlue);
+
     .navbar{
         display: flex;
         flex-direction: row;
@@ -148,7 +149,8 @@ const Nav = styled.nav`
         display: flex;
         flex-direction: row;
         list-style: none;
-        align-items: center
+        align-items: center;
+        flex-shrink: 0;
     }
     .nav-action-item{
         margin-right: 10px;
